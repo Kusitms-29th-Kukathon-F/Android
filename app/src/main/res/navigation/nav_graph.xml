@@ -7,32 +7,23 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.kukathonproject.view.HomeFragment"
+        android:name="com.example.kukathonproject.view.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_roadmapFragment"
-            app:destination="@id/roadmapFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_myPageFragment"
-            app:destination="@id/myPageFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home"/>
+
     <fragment
         android:id="@+id/scoreFragment"
-        android:name="com.example.kukathonproject.view.ScoreFragment"
+        android:name="com.example.kukathonproject.view.dopamin.ScoreFragment"
         android:label="ScoreFragment"
         tools:layout="@layout/fragment_score"/>
     <fragment
         android:id="@+id/roadmapFragment"
-        android:name="com.example.kukathonproject.view.RoadmapFragment"
+        android:name="com.example.kukathonproject.view.roadmap.RoadmapFragment"
         android:label="RoadmapFragment"
         tools:layout="@layout/fragment_roadmap"/>
     <fragment
         android:id="@+id/myPageFragment"
-        android:name="com.example.kukathonproject.view.MyPageFragment"
+        android:name="com.example.kukathonproject.view.mypage.MyPageFragment"
         android:label="MyPageFragment"
         tools:layout="@layout/fragment_my_page"/>
 </navigation>
