@@ -3,16 +3,20 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:title="home" />
+        android:title="홈페이지"
+        android:icon="@drawable/nav_home"/>
     <item
         android:id="@+id/scoreFragment"
-        android:title="score" />
+        android:title="도파민농도"
+        android:icon="@drawable/nav_drop"/>
     <item
         android:id="@+id/roadmapFragment"
-        android:title="roadmap" />
+        android:title="로드맵"
+        android:icon="@drawable/nav_map"/>
 
     <item
         android:id="@+id/myPageFragment"
-        android:title="mypage"/>
+        android:title="마이페이지"
+        android:icon="@drawable/nav_user"/>
 
 </menu>
