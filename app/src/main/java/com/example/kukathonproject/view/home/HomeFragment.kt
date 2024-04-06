@@ -1,4 +1,4 @@
-package com.example.kukathonproject.view.home
+package com.example.kukathonproject.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

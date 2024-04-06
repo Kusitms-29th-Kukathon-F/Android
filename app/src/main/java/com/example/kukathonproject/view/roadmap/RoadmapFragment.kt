@@ -14,6 +14,11 @@ class RoadmapFragment: BaseFragment<FragmentRoadmapBinding>(FragmentRoadmapBindi
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.button1Btn.setOnClickListener {
+            val characterDialog = QuestDialogFragment()
+            characterDialog.show(childFragmentManager, characterDialog.tag)
+        }
     }
 
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font-family="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dialog_bg_white" />
+
+    <ImageButton
+        android:id="@+id/close_ib"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/dialog_close"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="22dp"/>
+
+    <TextView
+        android:id="@+id/quest_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="퀘스트 히스토리"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/dialog_quest_line"
+        app:layout_constraintTop_toBottomOf="@id/quest_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quest_rv"
+        android:layout_width="312dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

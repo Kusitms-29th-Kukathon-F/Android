@@ -14,5 +14,10 @@ class MyPageFragment: BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding:
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.button1Btn.setOnClickListener {
+            val characterDialog = CharacterDialogFragment()
+            characterDialog.show(childFragmentManager, characterDialog.tag)
+        }
+
     }
 }

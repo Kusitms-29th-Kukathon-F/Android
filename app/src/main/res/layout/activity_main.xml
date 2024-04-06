@@ -29,7 +29,7 @@
         app:menu="@menu/bottom_navi_item"
         app:itemRippleColor="@null"
         app:itemActiveIndicatorStyle="@null"
-        app:itemIconTint="@color/black"
+        app:itemIconTint="@drawable/nav_menu_select_color"
         android:background="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
