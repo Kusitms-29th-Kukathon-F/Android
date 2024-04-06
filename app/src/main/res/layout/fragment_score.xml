@@ -52,7 +52,7 @@
                 android:fontFamily="@font/suit_bold"
                 android:textSize="16sp"
                 android:textColor="@color/black"
-                android:text="혈중 도파민 농도는?"/>
+                android:text="도파민 농도는?"/>
         </LinearLayout>
 
        <LinearLayout
@@ -138,7 +138,7 @@
             android:id="@+id/average"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="평균 점수"
+            android:text="나의 점수"
             android:textColor="@color/black"
             style="@style/Caption1"
             app:layout_constraintBottom_toBottomOf="@id/graph"
