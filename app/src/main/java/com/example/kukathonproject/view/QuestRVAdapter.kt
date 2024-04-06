@@ -41,10 +41,14 @@ class QuestRVAdapter(val items : MutableList<QuestItem>) : RecyclerView.Adapter<
 
             //// XML에서 정의한 뷰들을 아이디를 이용해 가져오기
             val questComment = itemView.findViewById<TextView>(R.id.quset_comment_tv)
+            val questComment2 = itemView.findViewById<TextView>(R.id.quset_comment_tv2)
+            val questComment3 = itemView.findViewById<TextView>(R.id.quset_comment_tv3)
 
             //아이템의 데이터로 뷰들을 설정
             //setImageResource : 이미지 넣어주기 위해
             questComment.text = items.quset_comment_tv
+            questComment2.text = items.quset_comment_tv2
+            questComment3.text = items.quset_comment_tv3
         }
     }
 }

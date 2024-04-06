@@ -36,9 +36,6 @@ class PresentDialogFragment : DialogFragment() {
         //dialog?.window?.setBackgroundDrawableResource(R.drawable.nameedit_box)
         dialog?.window?.setGravity(Gravity.CENTER)
 
-        childFragmentManager.beginTransaction()
-            .replace(R.id.tab_layout_container, HomeFragment().apply {})
-            .commit()
 
 
         return binding.root
@@ -52,37 +49,13 @@ class PresentDialogFragment : DialogFragment() {
             // 다이얼로그 종료
             dismiss()
         }
-        setTabLayout()
+
+        binding.applyBtn.setOnClickListener {
+            dismiss()
+        }
 
     }
 
-    private fun setTabLayout() {
-        binding.verifyTablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                when (tab?.position) {
-                    0 -> {
-                        childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, HomeFragment().apply {})
-                            .commit()
-                    }
-                    1 -> {
-                        childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, MyPageFragment().apply {  })
-                            .commit()
-                    }
-                    2->{
-                        childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, ScoreFragment().apply {  })
-                            .commit()
-                    }
-                }
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-        })
-    }
 
     override fun onResume() {
         super.onResume()

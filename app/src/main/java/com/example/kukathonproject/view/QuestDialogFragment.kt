@@ -30,6 +30,12 @@ class QuestDialogFragment : DialogFragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = FragmentQuestDialogBinding.inflate(inflater, container, false)
 
+        binding.closeIb.setOnClickListener {
+
+            // 다이얼로그 종료
+            dismiss()
+        }
+
 
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
@@ -47,11 +53,11 @@ class QuestDialogFragment : DialogFragment() {
         // RecyclerView에 표시할 데이터 리스트 생성
         val itemList = mutableListOf<QuestItem>()
 
-        itemList.add(QuestItem("인스타그램 사용시간을 18분 단축시켜보세요."))
-        itemList.add(QuestItem("어제보다 휴대폰을 30분 덜 사용하셨네요!"))
-        itemList.add(QuestItem("새로운 아이템을 획득했어요!"))
-        itemList.add(QuestItem("휴대폰 사용시간을 30분 단축시켜보세요."))
-        /*itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필7"))
+        itemList.add(QuestItem("인스타그램 사용시간을 18분 단축시켜보세요.","휴대폰 사용시간을 30분 단축시켜보세요.","새로운 아이템을 획득했어요!"))
+        /*itemList.add(QuestItem("어제보다 휴대폰을 30분 덜 사용하셨네요!","휴대폰 사용시간을 30분 단축시켜보세요.","새로운 아이템을 획득했어요!"))
+        itemList.add(QuestItem("새로운 아이템을 획득했어요!","휴대폰 사용시간을 30분 단축시켜보세요.","새로운 아이템을 획득했어요!"))
+        itemList.add(QuestItem("휴대폰 사용시간을 30분 단축시켜보세요.","휴대폰 사용시간을 30분 단축시켜보세요.","새로운 아이템을 획득했어요!"))
+        itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필7"))
         itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필8"))
         itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필9"))
         itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필10"))
