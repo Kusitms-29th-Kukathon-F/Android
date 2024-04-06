@@ -21,5 +21,10 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
             CharacterDialogFragment().show(childFragmentManager, CharacterDialogFragment().tag)
         }
 
+        binding.container.setOnClickListener {
+            QuestDialogFragment().show(childFragmentManager, QuestDialogFragment().tag)
+
+        }
+
     }
 }
