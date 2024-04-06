@@ -2,29 +2,37 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment"
+    app:startDestination="@id/homeFragment"
     xmlns:tools="http://schemas.android.com/tools">
 
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.example.kukathonproject.FirstFragment"
-        android:label="FirstFragment"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/homeFragment"
+        android:name="com.example.kukathonproject.view.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment2"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_homeFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
         <action
-            android:id="@+id/action_firstFragment_to_thirdFragment2"
-            app:destination="@id/thirdFragment" />
+            android:id="@+id/action_homeFragment_to_roadmapFragment"
+            app:destination="@id/roadmapFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myPageFragment"
+            app:destination="@id/myPageFragment" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.kukathonproject.SecondFragment"
-        android:label="SecondFragment"
-        tools:layout="@layout/fragment_second"/>
+        android:id="@+id/scoreFragment"
+        android:name="com.example.kukathonproject.view.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/fragment_score"/>
     <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.example.kukathonproject.ThirdFragment"
-        android:label="ThirdFragment"
-        tools:layout="@layout/fragment_third"/>
+        android:id="@+id/roadmapFragment"
+        android:name="com.example.kukathonproject.view.RoadmapFragment"
+        android:label="RoadmapFragment"
+        tools:layout="@layout/fragment_roadmap"/>
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.example.kukathonproject.view.MyPageFragment"
+        android:label="MyPageFragment"
+        tools:layout="@layout/fragment_my_page"/>
 </navigation>

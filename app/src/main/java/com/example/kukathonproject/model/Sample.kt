@@ -1,4 +1,5 @@
 package com.example.kukathonproject.model
 
-interface Apis {
-}
+data class Sample(
+    val id:Int
+)

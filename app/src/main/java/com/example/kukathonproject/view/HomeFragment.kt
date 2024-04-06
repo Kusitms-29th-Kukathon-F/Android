@@ -1,25 +1,25 @@
-package com.example.kukathonproject
+package com.example.kukathonproject.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kukathonproject.databinding.FragmentFirstBinding
-import com.example.kukathonproject.databinding.FragmentSecondBinding
+import com.example.kukathonproject.databinding.FragmentHomeBinding
 
-class SecondFragment: Fragment() {
+class HomeFragment: Fragment() {
 
-    lateinit var binding : FragmentSecondBinding
+    lateinit var binding : FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentSecondBinding.inflate(inflater,container,false)
+        binding=FragmentHomeBinding.inflate(inflater,container,false)
 
         return binding.root
     }
+
 
 }

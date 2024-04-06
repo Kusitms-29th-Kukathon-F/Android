@@ -2,13 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/firstFragment"
-        android:title="first" />
+        android:id="@+id/homeFragment"
+        android:title="home" />
     <item
-        android:id="@+id/secondFragment"
-        android:title="second" />
+        android:id="@+id/scoreFragment"
+        android:title="score" />
     <item
-        android:id="@+id/thirdFragment"
-        android:title="third" />
+        android:id="@+id/roadmapFragment"
+        android:title="roadmap" />
+
+    <item
+        android:id="@+id/myPageFragment"
+        android:title="mypage"/>
 
 </menu>

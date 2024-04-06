@@ -1,4 +1,4 @@
-package com.example.kukathonproject.model
+package com.example.kukathonproject.network
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
