@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.kukathonproject.base.BaseFragment
 import com.example.kukathonproject.databinding.FragmentMyPageBinding
 import com.example.kukathonproject.databinding.FragmentRoadmapBinding
+import com.example.kukathonproject.view.QuestDialogFragment
 
 class RoadmapFragment: BaseFragment<FragmentRoadmapBinding>(FragmentRoadmapBinding::inflate) {
 

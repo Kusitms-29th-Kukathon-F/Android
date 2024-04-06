@@ -15,10 +15,10 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
         super.onViewCreated(view, savedInstanceState)
 
         binding.sunmulBtn.setOnClickListener{
-            //선물 다이얼로그 띄우기
+            PresentDialogFragment().show(childFragmentManager, PresentDialogFragment().tag)
         }
         binding.moveBtn.setOnClickListener{
-            //도감 다이얼로그
+            CharacterDialogFragment().show(childFragmentManager, CharacterDialogFragment().tag)
         }
 
     }
