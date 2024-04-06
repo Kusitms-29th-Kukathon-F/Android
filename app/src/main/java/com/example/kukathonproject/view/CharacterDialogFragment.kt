@@ -36,7 +36,7 @@ class CharacterDialogFragment : DialogFragment() {
         dialog?.window?.setGravity(Gravity.CENTER)
 
         childFragmentManager.beginTransaction()
-            .replace(R.id.tab_layout_container, HomeFragment().apply {})
+            .replace(R.id.tab_layout_container, SecreteCharacterFragment().apply {})
             .commit()
 
 
@@ -61,17 +61,17 @@ class CharacterDialogFragment : DialogFragment() {
                 when (tab?.position) {
                     0 -> {
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, HomeFragment().apply {})
+                            .replace(R.id.tab_layout_container, SecreteCharacterFragment().apply {})
                             .commit()
                     }
                     1 -> {
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, MyPageFragment().apply {})
+                            .replace(R.id.tab_layout_container, SecreteCharacterFragment().apply {})
                             .commit()
                     }
                     2->{
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, ScoreFragment().apply {})
+                            .replace(R.id.tab_layout_container, SecreteCharacterFragment().apply {})
                             .commit()
                     }
                 }
