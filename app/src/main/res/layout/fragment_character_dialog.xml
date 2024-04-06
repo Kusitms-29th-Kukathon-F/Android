@@ -9,7 +9,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dialog_bg" />
+        android:src="@drawable/dialog_bg_white" />
 
     <ImageButton
         android:id="@+id/close_ib"
@@ -67,12 +67,29 @@
     <FrameLayout
         android:id="@+id/tab_layout_container"
         android:layout_width="312dp"
-        android:layout_height="0dp"
+        android:layout_height="280dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verify_tablayout">
+        app:layout_constraintTop_toBottomOf="@+id/verify_tablayout"
+        app:layout_constraintVertical_bias="0.0">
 
     </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/apply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_apply_btn"
+        android:enabled="false"
+        android:text="적용"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/verify_tablayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_container" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

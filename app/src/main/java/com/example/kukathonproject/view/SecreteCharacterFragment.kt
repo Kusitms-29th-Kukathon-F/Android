@@ -25,9 +25,9 @@ class SecreteCharacterFragment: BaseFragment<FragmentSecreteCharacterBinding>(Fr
         itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
         itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
         itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
-        itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
-        itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
-        itemList.add(SecreteCharacterItem(R.drawable.item_tool1,R.drawable.secrete_tool2))
+        itemList.add(SecreteCharacterItem(R.drawable.secrete_glass,R.drawable.secrete_tie))
+        itemList.add(SecreteCharacterItem(R.drawable.secrete_glass,R.drawable.secrete_tie))
+        itemList.add(SecreteCharacterItem(R.drawable.secrete_glass,R.drawable.secrete_tie))
         /*itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필7"))
         itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필8"))
         itemList.add(ProfileData(R.drawable.profilestorage_profile, "프로필9"))
@@ -37,7 +37,14 @@ class SecreteCharacterFragment: BaseFragment<FragmentSecreteCharacterBinding>(Fr
 
 
         // RecyclerView 어댑터 생성 및 데이터 리스트 전달
-        val rvadapter = SecreteCharacterRVAdapter(itemList)
+        val itemClickListener = object : SecreteCharacterRVAdapter.OnItemClickListener {
+            override fun onItemClick(item: SecreteCharacterItem) {
+                // 클릭된 아이템 처리
+            }
+        }
+
+        // RecyclerView 어댑터 생성 및 데이터 리스트, 리스너 전달
+        val rvadapter = SecreteCharacterRVAdapter(itemList, itemClickListener)
 
         // RecyclerView에 어댑터 설정(xml에서 설정한 리사이클러뷰 뷰바인딩)
         binding.secreteCharacterRv.adapter = rvadapter

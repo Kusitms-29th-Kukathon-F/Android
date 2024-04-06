@@ -15,11 +15,19 @@ import com.example.kukathonproject.R
 import com.example.kukathonproject.base.BaseFragment
 import com.example.kukathonproject.databinding.FragmentCharacterDialogBinding
 import com.example.kukathonproject.databinding.FragmentHomeBinding
+import com.example.kukathonproject.model.SecreteCharacterItem
 import com.google.android.material.tabs.TabLayout
 
-class CharacterDialogFragment : DialogFragment() {
+class CharacterDialogFragment : DialogFragment(), SecreteCharacterRVAdapter.OnItemClickListener {
 
     lateinit var binding: FragmentCharacterDialogBinding
+    override fun onItemClick(item: SecreteCharacterItem) {
+        // 클릭된 아이템을 사용하여 버튼을 활성화하거나 다른 작업 수행
+        // 예: 버튼 활성화
+        binding.applyBtn.setBackgroundResource(R.drawable.apply_okay_btn)
+        binding.applyBtn.isEnabled = true
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

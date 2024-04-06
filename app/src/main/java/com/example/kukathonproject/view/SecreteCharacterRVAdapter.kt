@@ -8,8 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kukathonproject.R
 import com.example.kukathonproject.model.SecreteCharacterItem
 
-class SecreteCharacterRVAdapter(val items : MutableList<SecreteCharacterItem>) : RecyclerView.Adapter<SecreteCharacterRVAdapter.ViewHolder>()
+class SecreteCharacterRVAdapter(val items : MutableList<SecreteCharacterItem>, private val listener: OnItemClickListener) : RecyclerView.Adapter<SecreteCharacterRVAdapter.ViewHolder>()
 {
+
+    interface OnItemClickListener {
+        fun onItemClick(item: SecreteCharacterItem)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SecreteCharacterRVAdapter.ViewHolder {
 
@@ -35,6 +39,16 @@ class SecreteCharacterRVAdapter(val items : MutableList<SecreteCharacterItem>) :
 
     //ViewHolder: RecyclerView에서 각 아이템의 뷰를 보유하는 이너클래스
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = items[position]
+                    listener.onItemClick(item)
+                }
+            }
+        }
 
         // bindItems: ViewHolder에 데이터를 바인딩하는 함수
         fun bindItems(items : SecreteCharacterItem){
