@@ -14,5 +14,10 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.button1Btn.setOnClickListener {
+            val presentDialog = PresentDialogFragment()
+            presentDialog.show(childFragmentManager, presentDialog.tag)
+        }
+
     }
 }
