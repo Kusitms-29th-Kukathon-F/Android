@@ -5,21 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kukathonproject.R
+import com.example.kukathonproject.base.BaseFragment
 import com.example.kukathonproject.databinding.FragmentHomeBinding
 
-class HomeFragment: Fragment() {
+class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
-    lateinit var binding : FragmentHomeBinding
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding=FragmentHomeBinding.inflate(inflater,container,false)
-
-        return binding.root
     }
-
-
 }
