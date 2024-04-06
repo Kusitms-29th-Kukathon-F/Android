@@ -9,7 +9,7 @@ import com.example.kukathonproject.base.BaseFragment
 import com.example.kukathonproject.databinding.FragmentRoadmapBinding
 import com.example.kukathonproject.databinding.FragmentScoreBinding
 
-class ScoreFragment: BaseFragment<FragmentRoadmapBinding>(FragmentRoadmapBinding::inflate) {
+class ScoreFragment: BaseFragment<FragmentScoreBinding>(FragmentScoreBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
