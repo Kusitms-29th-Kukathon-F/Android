@@ -5,18 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kukathonproject.R
 import com.example.kukathonproject.base.BaseFragment
 import com.example.kukathonproject.databinding.FragmentHomeBinding
-import com.example.kukathonproject.databinding.FragmentMyPageBinding
 
-class MyPageFragment: BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding::inflate) {
+class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button1Btn.setOnClickListener {
-            val characterDialog = CharacterDialogFragment()
-            characterDialog.show(childFragmentManager, characterDialog.tag)
+        binding.sunmulBtn.setOnClickListener{
+            PresentDialogFragment().show(childFragmentManager, PresentDialogFragment().tag)
+        }
+        binding.moveBtn.setOnClickListener{
+            CharacterDialogFragment().show(childFragmentManager, CharacterDialogFragment().tag)
         }
 
     }

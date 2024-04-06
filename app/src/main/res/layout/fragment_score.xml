@@ -1,18 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9E9EE">
 
-    <Button
-        android:id="@+id/button1_btn"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
-        android:text="2"/>
+        android:text="도파민농도"
+        style="@style/H3"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_radius_10"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/suit_regular"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="오늘 나의"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/suit_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="혈중 도파민 농도는?"/>
+        </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/firstcontainer"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layout_constraintTop_toBottomOf="@id/title"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginTop="21dp"
+           android:layout_marginLeft="24dp"
+           android:background="@drawable/bg_radius_8"
+           android:backgroundTint="#F8FAFC">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="최고 점수"
+               style="@style/Caption2"
+               android:textColor="@color/gray4"
+               android:paddingStart="13dp"
+               android:paddingTop="5dp"
+               android:paddingBottom="5dp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+               android:paddingTop="5dp"
+               android:paddingBottom="5dp"
+               android:layout_marginRight="13dp"
+               android:text="87점"
+               android:textColor="#5797FF"/>
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/firstcontainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_radius_8"
+            android:backgroundTint="#F8FAFC">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최저 점수"
+                style="@style/Caption2"
+                android:textColor="@color/gray4"
+                android:paddingStart="13dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="13dp"
+                android:text="67점"
+                android:textColor="#5797FF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/graph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_graph"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평균 점수"
+            android:textColor="@color/black"
+            style="@style/Caption1"
+            app:layout_constraintBottom_toBottomOf="@id/graph"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/average"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="60dp"
+            android:text="70점"
+            style="@style/H3"
+            android:textColor="@color/orange"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="41dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorHeight="1dp"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/gray3"
+            android:layout_height="41dp">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도파민 변화 추이"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용 앱"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

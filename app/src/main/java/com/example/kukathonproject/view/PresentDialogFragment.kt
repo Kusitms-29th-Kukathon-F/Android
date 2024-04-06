@@ -14,6 +14,8 @@ import androidx.fragment.app.DialogFragment
 import com.example.kukathonproject.R
 import com.example.kukathonproject.databinding.FragmentCharacterDialogBinding
 import com.example.kukathonproject.databinding.FragmentPresentDialogBinding
+import com.example.kukathonproject.view.dopamin.ScoreFragment
+import com.example.kukathonproject.view.mypage.MyPageFragment
 import com.google.android.material.tabs.TabLayout
 
 class PresentDialogFragment : DialogFragment() {
@@ -65,12 +67,12 @@ class PresentDialogFragment : DialogFragment() {
                     }
                     1 -> {
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, MyPageFragment().apply {})
+                            .replace(R.id.tab_layout_container, MyPageFragment().apply {  })
                             .commit()
                     }
                     2->{
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.tab_layout_container, ScoreFragment().apply {})
+                            .replace(R.id.tab_layout_container, ScoreFragment().apply {  })
                             .commit()
                     }
                 }
