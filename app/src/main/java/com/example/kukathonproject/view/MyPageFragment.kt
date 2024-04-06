@@ -15,8 +15,8 @@ class MyPageFragment: BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding:
         super.onViewCreated(view, savedInstanceState)
 
         binding.button1Btn.setOnClickListener {
-            val guideDialog = CharacterDialogFragment()
-            guideDialog.show(childFragmentManager, guideDialog.tag)
+            val characterDialog = CharacterDialogFragment()
+            characterDialog.show(childFragmentManager, characterDialog.tag)
         }
 
     }
